@@ -103,6 +103,7 @@ public class LoginController implements ILoginController {
 
     @Override
     public void OnLogin(String email, String password) {
+        // User 객체는 Model에 속한다.
         User user = new User(email,password);
         int loginCode = user.isValid();
         if(loginCode == 0)
