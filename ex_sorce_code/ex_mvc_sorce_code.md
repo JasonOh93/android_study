@@ -237,3 +237,4 @@ public class MainActivity extends AppCompatActivity  implements ILoginView {
     }
 }
 ```
+* MainActivity의 경우 Android 내부에서 View일수도 있으며 Controller일수도 있다.
