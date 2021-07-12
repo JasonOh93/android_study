@@ -16,6 +16,7 @@
     * [EX_CODE](./ex_sorce_code/ex_mvvm_sorce_code.md)
 * ### [FLUX Pattern](#flux-디자인-패턴)
 * ### [BLOC Pattern](#bloc-디자인-패턴)
+* ### [PROVIDER Pattern](#provider-디자인-패턴)
 
 <br>
 
@@ -121,7 +122,7 @@
 <br>
 
 ## FLUX 디자인 패턴
-### Flux Design Pattern
+### Flux Design Pattern (React-Native에서 사용)
 
 [FLUX 참고 블로그 1](https://lemontia.tistory.com/637), [FLUX 참고 블로그 2](https://im-designloper.tistory.com/17)<br>
 
@@ -165,7 +166,7 @@
 <br>
 
 ## BLOC 디자인 패턴
-### Bussiness Login Component
+### Bussiness Login Component (Flutter에서 사용)
 
 [BLOC 참고 블로그 1](https://pgnt.tistory.com/96), [BLOC 참고 블로그 2](https://centbin-dev.tistory.com/34), [BLOC 참고 블로그 3](https://sudarlife.tistory.com/entry/Bloc-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%BC%EA%B9%8C)<br>
 
@@ -187,6 +188,34 @@
     * UI에서는 BLOC의 내부 구현을 몰라도 된다.
     * BLOC는 여러 UI에서 구독이 가능하다.
     * BLOC만 분리해서 테스트가 가능하도록 해야한다.
+<br>
+
+---
+
+<br>
+
+## Provider 디자인 패턴
+### Provider (Flutter에서 사용)
+
+[Provider 참고 블로그 1](https://centbin-dev.tistory.com/30?category=1068907), [Provider 참고 블로그 2](https://sudarlife.tistory.com/entry/Flutter-%ED%94%8C%EB%9F%AC%ED%84%B0-BloC-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%99%9C-Provider-%EB%A5%BC-%EC%8D%A8%EC%95%BC-%ED%95%A0%EA%B9%8C?category=1176193)<br>
+
+* 데이터 공유나 로직을 분리하는데 좀 더 용이합니다.
+* 구글에서는 Flutter 개발 시 **[Bloc 디자인 패턴](#bloc-디자인-패턴)을 권장**합니다.
+* Provider는 Bloc보다는 쉽게 패턴을 적용할 수 있습니다. <br>
+즉, **데이터 공유와 로직의 분리가 좀 더 쉬워**집니다.
+
+<br>
+
+* 특징 (Provider를 사용해야 하는 이유) : 
+    * 관심사의 분리
+        * 클래스가 하나의 역할을 하게 하는 것. <br>
+        이것을 **관심사의 분리**라고 합니다.
+    * 데이터의 공유
+        * 여러 페이지에서 하나의 데이터를 공유할 때 편하게 구현 가능합니다.
+    * 간결한 코드 제공
+        * Bloc 패턴에 비하면 코드가 좀 더 간결해 집니다. 
+        * **중규모 프로젝트**에서는 **Provider** 패턴을 사용하는 것이 좋습니다.
+        * **대규모 프로젝트**는 **BLOC**를 사용하는게 좋습니다.
 <br>
 
 ---
