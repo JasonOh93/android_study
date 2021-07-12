@@ -173,10 +173,10 @@
 <img src="./bloc_images/bloc_image_pattern_diagram1.png" alt="BLOC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
 <br><br>
 
-* Action : 
-* Dispatcher : 
-* Store : 
-* View OR The Controller View : 
+*  : 
+*  : 
+*  : 
+*  : 
 
 * 특징 : 
     * 
