@@ -197,7 +197,7 @@
 ## Provider 디자인 패턴
 ### Provider (Flutter에서 사용)
 
-[Provider 참고 블로그 1](https://centbin-dev.tistory.com/30?category=1068907), [Provider 참고 블로그 2](https://sudarlife.tistory.com/entry/Flutter-%ED%94%8C%EB%9F%AC%ED%84%B0-BloC-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%99%9C-Provider-%EB%A5%BC-%EC%8D%A8%EC%95%BC-%ED%95%A0%EA%B9%8C?category=1176193)<br>
+[Provider 참고 블로그 1](https://centbin-dev.tistory.com/30?category=1068907), [Provider 참고 블로그 2](https://sudarlife.tistory.com/entry/Flutter-%ED%94%8C%EB%9F%AC%ED%84%B0-BloC-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%99%9C-Provider-%EB%A5%BC-%EC%8D%A8%EC%95%BC-%ED%95%A0%EA%B9%8C?category=1176193), [Provider 참고 블로그 3](https://medium.com/hongbeomi-dev/flutter-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-provider-pattern-4e757d049160)<br>
 
 * 데이터 공유나 로직을 분리하는데 좀 더 용이합니다.
 * 구글에서는 Flutter 개발 시 **[Bloc 디자인 패턴](#bloc-디자인-패턴)을 권장**합니다.
