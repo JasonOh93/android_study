@@ -91,7 +91,7 @@
 [MVVM Ex code 참고사이트 1](https://aonee.tistory.com/48), [MVVM Ex code 참고사이트 2](https://skytitan.tistory.com/79), [MVVM Ex code 참고사이트 3](https://github.com/ericmaxwell2003/ticTacToe/tree/mvvm), [MVVM Ex code 참고사이트 4](https://programmingfbf7290.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-mvp%EC%99%80-mvvm-%EC%98%88%EC%A0%9C%EB%A1%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%903-MVVM)<br>
 
 <br>
-<img src="./mvvm_images/mvvm_image_pattern_diagram1.png" width="350px" alt="MVVM DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;<img src="./mvvm_images/mvvm_image_pattern_diagram2.png" width="350px" alt="MVVM DESION PATTERN DIAGRAM">
+<img src="./mvvm_images/mvvm_image_pattern_diagram1.png" width="500px" alt="MVVM DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;<img src="./mvvm_images/mvvm_image_pattern_diagram2.png" width="500px" alt="MVVM DESION PATTERN DIAGRAM">
 <br><br>
 
 * Model : 
