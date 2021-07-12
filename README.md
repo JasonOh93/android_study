@@ -15,6 +15,7 @@
 * ### [MVVM Pattern](#mvvm-디자인-패턴)
     * [EX_CODE](./ex_sorce_code/ex_mvvm_sorce_code.md)
 * ### [FLUX Pattern](#flux-디자인-패턴)
+* ### [BLOC Pattern](#bloc-디자인-패턴)
 
 <br>
 
@@ -157,6 +158,28 @@
     * **단방향 데이터 흐름(unidirectional data flow)**
     * 데이터 흐름은 디스패처 => 스토어 => 뷰 로 흘러가며 뷰에서 입력되는 데이터가 발생하면 액션(Action)을 이용해 디스패처로 향하도록 합니다. 
     * 이러한 흐름의 ***장점***은 데이터를 **직접 수정할 수 없고** 반드시 액션을 통해서만 수정이 일어나기 때문에 **교통정리가 가능**해 진다는 점입니다. 
+<br>
+
+---
+
+<br>
+
+## BLOC 디자인 패턴
+### Bussiness Login Component
+
+[BLOC 참고 블로그 1](https://pgnt.tistory.com/96), [BLOC 참고 블로그 2](https://centbin-dev.tistory.com/34), [BLOC 참고 블로그 3](https://sudarlife.tistory.com/entry/Bloc-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%BC%EA%B9%8C)<br>
+
+<br>
+<img src="./bloc_images/bloc_image_pattern_diagram1.png" alt="BLOC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
+<br><br>
+
+* Action : 
+* Dispatcher : 
+* Store : 
+* View OR The Controller View : 
+
+* 특징 : 
+    * 
 <br>
 
 ---
