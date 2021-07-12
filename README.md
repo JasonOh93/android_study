@@ -14,7 +14,7 @@
     * [EX_CODE](./ex_sorce_code/ex_mvp_sorce_code.md)
 * ### [MVVM Pattern](#mvvm-디자인-패턴)
     * [EX_CODE](./ex_sorce_code/ex_mvvm_sorce_code.md)
-* ### [flux Pattern](#flux_pattern)
+* ### [FLUX Pattern](#flux-디자인-패턴)
 
 <br>
 
@@ -33,6 +33,7 @@
 [MVC Ex Code 참고사이트 1](https://protocoderspoint.com/model-view-controller-android-mvc-example-login-validation/), [MVC Ex code 참고사이트 2](https://jroomstudio.tistory.com/21)<br>
 [MVP Ex code 참고사이트 1](https://cjw-awdsd.tistory.com/9), [MVP Ex code 참고사이트 2](https://youngest-programming.tistory.com/111), [MVP Ex code 참고사이트 3](https://jroomstudio.tistory.com/22)<br>
 [MVVM Ex code 참고사이트 1](https://aonee.tistory.com/48), [MVVM Ex code 참고사이트 2](https://skytitan.tistory.com/79), [MVVM Ex code 참고사이트 3](https://github.com/ericmaxwell2003/ticTacToe/tree/mvvm), [MVVM Ex code 참고사이트 4](https://programmingfbf7290.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-mvp%EC%99%80-mvvm-%EC%98%88%EC%A0%9C%EB%A1%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%903-MVVM)<br>
+[FLUX 참고 블로그 1](https://lemontia.tistory.com/637), [FLUX 참고 블로그 2](https://im-designloper.tistory.com/17), <br>
 [의존성 참고 블로그](https://velog.io/@huttels/%EC%9D%98%EC%A1%B4%EC%84%B1%EC%9D%B4%EB%9E%80),
 
 ## MVC 디자인 패턴
@@ -65,7 +66,7 @@
 ### MVP (Model View Presenter)
 
 <br>
-<img src="./mvp_images/mvp_image_pattern_diagram1.png" width="300px" alt="MVC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./mvp_images/mvp_image_pattern_diagram1.png" width="300px" alt="MVP DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br><br>
 
 * Model : 데이터 처리하는 부분
@@ -112,6 +113,47 @@
         * 뷰에 대한 처리가 복잡해 질수록 뷰모델이 거대해짐
         * 상대적으로 뷰는 아무 역할도 하지 않음
         * 뷰모델이 또다른 형태의 액티비티 클래스 구현으로 변질
+<br>
+
+---
+
+<br>
+
+## FLUX 디자인 패턴
+### Flux Design Pattern
+* MVC의 문제를 해결할 목적으로 고안한 애플리케이션 아키텍쳐입니다. 
+* Flux 애플리케이션은 디스패처(Dispatcher), 스토어(Store), 뷰(View) 등 세 부분으로 구성됩니다.
+* 뷰는 단순히 화면에 보여지는 것을 넘어 자식 뷰로 전달도 하는 컨트롤 역할도 병행합니다.<br>
+    그래서 **Controller View**라고 불리기도 합니다.
+* ReactJS의 **Redux의 디자인패턴**이기도 하다
+* 모든 변경 사항은 **Action -> Dispatcher 를 거쳐서 Store에 영향을 미친다는 점**
+
+<br>
+<img src="./flux_images/flux_image_pattern_diagram1.png" width="300px" alt="FLUX DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+
+* Action : 
+    * 디스패처 특징 메소드를 실행하면 스토어에 변화를 일으킬 수 있습니다.<br>
+    이때 이 **데이터 묶음**을 **액션**이라 하고, 전달할 액션 객체는 액션 생성자라는 함수를 통해 만들어집니다.
+    * 뷰에서 **액션생성자(Action creator)를 실행**하여 전달할 메세지을 생성하고, **디스패처에 전달**하여 스토어에 저장되어 있는 **상태를 변경**하는 것입니다.
+* Dispatcher : 
+    * 디스패처는 Flux 애플리케이션의 **모든 데이터 흐름을 관리하는 허브 역할**을 합니다.
+    * 액션이 발생하면 디스패처로 메세지나 액션 객체가 전달되고 디스패처에서는 등록된 콜백함수를 통해 이 메세지를 스토어에 전달합니다.
+    * 다른 구성요소와 달리 디스패처는 **전체 애플리케이션**에서 **한 개의 인스턴스만 사용**합니다.
+* Store : 
+    * 스토어는 애플리케이션 상태를 저장합니다.
+    * Flux의 스토어는 상태를 다루기 때문에 무엇이든 저장할 수 있고 단순한 Object로 구성되어 있습니다. 
+    * 모든 상태변경은 **스토어에 의해서 결정**되어야만 하며, **상태변경을 위한 요청을 스토어에 직접 보낼 수 없습니다.**
+    * 무조건 액션 생성자를 통해 **디스패처를 통해 액션을 보내야만 수정이 가능**해집니다.
+* View OR The Controller View : 
+    * 상태를 가져와서 보여주고 입력받을 화면을 보여주는 역할
+    * 스토어와 뷰 사이의 **중간관리자**같은 역할
+    * 상태가 변경되었을 때 스토어가 그 사실을 컨트롤러 뷰에게 알려주면, 컨트롤러 뷰는 자신 아래에 있는 모든 뷰에게 새로운 상태를 넘겨줍니다.
+
+* 특징 : 
+    * **단방향 데이터 흐름(unidirectional data flow)**
+    * 데이터 흐름은 디스패처 => 스토어 => 뷰 로 흘러가며 뷰에서 입력되는 데이터가 발생하면 액션(Action)을 이용해 디스패처로 향하도록 합니다. 
+    * 이러한 흐름의 ***장점***은 데이터를 **직접 수정할 수 없고** 반드시 액션을 통해서만 수정이 일어나기 때문에 **교통정리가 가능**해 진다는 점입니다. 
 <br>
 
 ---
