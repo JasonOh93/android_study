@@ -169,17 +169,24 @@
 
 [BLOC 참고 블로그 1](https://pgnt.tistory.com/96), [BLOC 참고 블로그 2](https://centbin-dev.tistory.com/34), [BLOC 참고 블로그 3](https://sudarlife.tistory.com/entry/Bloc-%ED%8C%A8%ED%84%B4%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%BC%EA%B9%8C)<br>
 
+* 비즈니스 로직을 네트워크나 저장소에서 분리하고 UI 화면 사이에서 이벤트 및 데이터를 수신하고 전달하는 비즈니스 로직 패턴입니다.
+* UI는 UI를 나타내는 코드만 있어야 합니다.
+* 유효성 검사, 데이터 조작과 같은 어떤 논리적인 처리는 **BLOC에서 처리**되어야 한다는 것을 의미합니다.
+* 각각의 역할을 나누어 맡은 역할만 할 수 있게 만드는 아키텍쳐 설계 패턴이라고 할 수 있습니다.
+* Reactive Programming을 기본 기술로 사용하여 이벤트와 데이터 흐름을 처리합니다.
+* Reactive Programming은 데이터 스트림을 비동기적으로 처리해야하는 문제를 해결하는 방법입니다.
+* BLOC는 Reactive Programming을 사용하기 때문에 rxdart를 사용합니다.
+
 <br>
 <img src="./bloc_images/bloc_image_pattern_diagram1.png" alt="BLOC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
 <br><br>
 
-*  : 
-*  : 
-*  : 
-*  : 
-
 * 특징 : 
-    * 
+    * UI에서는 여러 BLOC가 존재할 수 있다.
+    * UI에서는 화면에 집중하고 BLOC에서는 비즈니스 로직에 집중한다. ⇒ 즉, 이벤트 처리는 BLOC에서 전부 한다.
+    * UI에서는 BLOC의 내부 구현을 몰라도 된다.
+    * BLOC는 여러 UI에서 구독이 가능하다.
+    * BLOC만 분리해서 테스트가 가능하도록 해야한다.
 <br>
 
 ---
