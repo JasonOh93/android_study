@@ -40,8 +40,8 @@
 ### MVC (Model View Controller)
 
 <br>
-<img src="./mvc_images/mvc_image_pattern_diagram1.png" width="200px" alt="MVC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./mvc_images/mvc_image_pattern_diagram2.png" width="230px" alt="MVC DESION PATTERN DIAGRAM">
+<img src="./mvc_images/mvc_image_pattern_diagram1.png"alt="MVC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
+<img src="./mvc_images/mvc_image_pattern_diagram2.png"alt="MVC DESION PATTERN DIAGRAM">
 <br><br>
 
 **상태가 변경되었다는 정보를 View와 Model이 서로 양방향으로 주고받는 형태**
@@ -66,7 +66,7 @@
 ### MVP (Model View Presenter)
 
 <br>
-<img src="./mvp_images/mvp_image_pattern_diagram1.png" width="300px" alt="MVP DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./mvp_images/mvp_image_pattern_diagram1.png" alt="MVP DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
 <br><br>
 
 * Model : 데이터 처리하는 부분
@@ -91,7 +91,7 @@
 ### MVVM (Model View ViewModel)
 
 <br>
-<img src="./mvvm_images/mvvm_image_pattern_diagram1.png" width="300px" alt="MVVM DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;<img src="./mvvm_images/mvvm_image_pattern_diagram2.png" width="300px" alt="MVVM DESION PATTERN DIAGRAM">
+<img src="./mvvm_images/mvvm_image_pattern_diagram1.png" alt="MVVM DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;<img src="./mvvm_images/mvvm_image_pattern_diagram2.png" alt="MVVM DESION PATTERN DIAGRAM">
 <br><br>
 
 * Model : 
@@ -129,7 +129,7 @@
 * 모든 변경 사항은 **Action -> Dispatcher 를 거쳐서 Store에 영향을 미친다는 점**
 
 <br>
-<img src="./flux_images/flux_image_pattern_diagram1.png" width="300px" alt="FLUX DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./flux_images/flux_image_pattern_diagram1.png" alt="FLUX DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
 <br><br>
 
 * Action : 
