@@ -40,8 +40,8 @@
 ### MVC (Model View Controller)
 
 <br>
-<img src="./mvc_images/mvc_image_pattern_diagram1.png"alt="MVC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
-<img src="./mvc_images/mvc_image_pattern_diagram2.png"alt="MVC DESION PATTERN DIAGRAM">
+<img src="./mvc_images/mvc_image_pattern_diagram1.png" width="350px" alt="MVC DESION PATTERN DIAGRAM">&nbsp;&nbsp;&nbsp;
+<img src="./mvc_images/mvc_image_pattern_diagram2.png" width="350px" alt="MVC DESION PATTERN DIAGRAM">
 <br><br>
 
 **상태가 변경되었다는 정보를 View와 Model이 서로 양방향으로 주고받는 형태**
