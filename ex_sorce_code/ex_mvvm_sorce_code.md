@@ -9,7 +9,7 @@
 
 <br>
 
-![Android MVVM Project Structure](/mvvm_images/mvvm_image3.png)
+![Android MVVM Project Structure](../mvvm_images/mvvm_image3.png)
 Android MVVM Project Structure  <br><br>
 
 <br>

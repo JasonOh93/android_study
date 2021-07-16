@@ -8,7 +8,7 @@
 
 <br>
 
-![Android MVP Project Structure](/mvp_images/mvp_image1.png)
+![Android MVP Project Structure](../mvp_images/mvp_image1.png)
 Android MVP Project Structure  <br><br>
 
 # Model

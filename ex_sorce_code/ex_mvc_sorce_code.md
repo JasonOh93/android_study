@@ -8,7 +8,7 @@
 
 <br>
 
-![Android MVC Project Structure](/mvc_images/mvc_image1.png)
+![Android MVC Project Structure](../mvc_images/mvc_image1.png)
 Android MVC Project Structure  <br><br>
 
 # Model
