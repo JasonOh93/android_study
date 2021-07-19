@@ -13,3 +13,40 @@
 
 <br>
 
+----
+
+<br>
+
+## Activity Lifecycle
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+### asdf
+
