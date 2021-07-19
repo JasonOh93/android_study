@@ -14,9 +14,9 @@
 
 ## Android Study
 * ### 2021년 07월 17일 1주차 Study
-    * [Design Pattern](./design_pattern.md)
+    * [Design Pattern](./2021_07_17_1주차/design_pattern.md)
 * ### 2021년 07월 24일 2주차 Study
-    * [Android Activity 및 Fragment 생명주기](./design_pattern.md#mvp-디자인-패턴)
+    * [Android Activity 및 Fragment 생명주기](./2021_07_24_2주차/Activity_Fragment_Lifecycle.md)
     * [Android abstract & Interface의 차이]()
     * [Android Activity 및 Fragment 생명주기]()
 
