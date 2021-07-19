@@ -1,6 +1,6 @@
 ## Activity & Fragment Lifecycle
-* ### [Activity Lifecycle](#activity-lifecycle)
-* ### [Fragment Lifecycle](#fragment-lifecycle)
+* ### [Activity 생명주기](#activity-lifecycle)
+* ### [Fragment 생명주기](#fragment-lifecycle)
 
 <br>
 
@@ -18,35 +18,7 @@
 <br>
 
 ## Activity Lifecycle
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
-### asdf
 
+[Android Developer Site](https://developer.android.com/reference/android/app/Activity),
+
+![Activity 생명주기](./activity_lifecycle_imgs/activity_lifecycle_diagram_1.png)
