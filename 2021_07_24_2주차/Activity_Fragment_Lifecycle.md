@@ -17,7 +17,13 @@
 
 <br>
 
+### 생명 주기는 Android 작동 방식의 핵심으로, 생명 주기를 준수하지 않으면 메모리 누출 또는 애플리케이션의 비정상 종료가 발생할 수 있습니다.
+
+<br>
+
 ## Activity Lifecycle
+
+* ### Activity class : Android 앱의 중요한 구성요소로 활동이 실행되고 결합되는 방식은 플랫폼 애플리케이션 모델의 기본 요소입니다.
 
 [Android Developer Site](https://developer.android.com/reference/android/app/Activity), [Android Developer Site(한국어)](https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko)
 
@@ -54,3 +60,60 @@
         1. (사용자가 활동을 완전히 닫거나 활동에서 finish()가 호출되어) 활동이 종료되는 경우
         2. 구성 변경(예: 기기 회전 또는 멀티 윈도우 모드)으로 인해 시스템이 일시적으로 활동을 소멸시키는 경우
 * onNewIntent() : 해당 활동에서 자신을 다시 호출 할 때 발동
+
+<br>
+
+---
+
+<br>
+
+## Fragment Lifecycle
+
+[참고 블로그 1](https://ddangeun.tistory.com/50), [참고 블로그 2](https://re-build.tistory.com/4)
+
+* ### Fragment : 앱 UI의 재사용 가능한 부분을 나타냅니다.
+    *  자체 레이아웃을 정의 및 관리하고 자체 수명 주기를 보유하며 자체 입력 이벤트를 처리할 수 있습니다.
+    * **독립적으로 존재할 수 없고** 활동이나 다른 프래그먼트에서 호스팅되어야 합니다. 
+    * 액티비티(default : 백스택에 저장)와 프래그먼트(default : 백스택에 저장 안함)의 수명 주기에서 가장 중요한 차이점은 백스택에 저장되는 방법에 있습니다.
+
+![Fragment 생명주기](./fragment_lifecycle_imgs/fragment_lifecycle_diagram_1.png)
+
+* onAttach() : 프래그먼트가 액티비티와 연결되어 있었던 경우 호출, 여기서 액티비티가 전달됩니다.
+* onCreate() : 프래그먼트를 생성할 때 호출, 프래그먼트가 일시정지 혹은 중단 후 재개되었을 때 유지하고 있어야 하는 것을 여기서 초기화 해야합니다. (Activity와 동일)
+* onCreateView() : 프래그먼트가 생성된후 호출
+    * 프래그먼트가 자신의 인터페이스를 **처음 그리기 위해 호출**합니다. 
+    * **View를 반환**해야 합니다. 
+    * 이 메서드는 **프래그먼트의 레이아웃 루트**이기 때문에 UI를 제공하지 않는 경우에는 null을 반환하면 됩니다.
+    * 몇가지의 뷰들은 적절히 초기화 되어있지 않았을 수 있기 때문에 **findViewById 등을 사용하여 초기화 하지는 않아야** 합니다.
+    * 그래서 View가 완전히 생성되었을때 호출되는 onViewCreated() 메서드에서 findViewById를 사용하여 초기화 해야 합니다. 
+    * onViewCreated는 완전히 View가 생성되었음을 확신시켜줍니다.
+* onViewCreated() : onCreateView가 실행 된 후에 실행, View가 모두 만들어 진 후에 작업을 진행할 수 있다.
+* onActivityCreated() : deprecated되어 있습니다.<br>
+Activity가 모두 만들어 진 후 실행하게 되는 메소드입니다.
+* onStart() : 액티비티가 시작됨 상태에 들어가면 이 메서드를 호출합니다. (Activity와 동일)
+    * 매우 빠르게 완료
+    * 완료되면 Resumed(재개)상태로 들어가 onResume() 메서드를 호출합니다.
+* onResume() : 사용자와 상호작용 합니다. (Activity와 동일)
+* onPause() : (Activity와 동일)
+    * 사용자가 프래그먼트를 떠나면 첫번 째로 이 메서드를 호출합니다. 
+    * 사용자가 돌아오지 않을 수도 있으므로 여기에 현재 사용자 세션을 넘어 지속되어야 하는 변경사항을 저장합니다. 
+* onStop() : (Activity와 동일)
+* onDestoryView() : 프래그먼트와 연결된 View Layer가 제거되는 중일 때 호출됩니다.
+* onDestroy() : (Activity와 동일)
+* onDetach() : 프래그먼트가 액티비티와 연결이 끊어지는 중일 때 호출됩니다.
+
+``` markdown
+***테스트 용으로 확인 해본 액티비티와 프래그먼트의 확인 사항***
+
+2021-07-20 14:51:07.307 13106-13106/com.jasonoh.lifecycletest E/TAG: MainActivity2 -> onCreate: 
+2021-07-20 14:51:07.315 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onAttach: 
+2021-07-20 14:51:07.315 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onCreate: 
+2021-07-20 14:51:07.319 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onCreateView: 
+2021-07-20 14:51:07.319 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onViewCreated: 
+2021-07-20 14:51:07.323 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onActivityCreated: 
+2021-07-20 14:51:07.325 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onStart: 
+2021-07-20 14:51:07.325 13106-13106/com.jasonoh.lifecycletest E/TAG: MainActivity2 -> onStart: 
+2021-07-20 14:51:07.326 13106-13106/com.jasonoh.lifecycletest E/TAG: MainActivity2 -> onResume: 
+2021-07-20 14:51:07.326 13106-13106/com.jasonoh.lifecycletest E/TAG: Fragment1 -> onResume: 
+2021-07-20 14:51:07.828 13106-13106/com.jasonoh.lifecycletest E/TAG: MainActivity -> onStop: 
+```
