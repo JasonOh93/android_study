@@ -17,8 +17,8 @@
     * [Design Pattern](./2021_07_17_1주차/design_pattern.md)
 * ### 2021년 07월 24일 2주차 Study
     * [Android Activity 및 Fragment 생명주기](./2021_07_24_2주차/Activity_Fragment_Lifecycle.md)
-    * [Android abstract & Interface의 차이]()
-    * [Android Activity 및 Fragment 생명주기]()
+    * [Android abstract & Interface의 차이](./2021_07_24_2주차/Abstract_Interface.md)
+    * [Android Kotlin Generic](./2021_07_24_2주차/Kotlin_Generic.md)
 
 <br>
 
