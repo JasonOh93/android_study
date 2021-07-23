@@ -18,6 +18,8 @@
 
 ## Generic
 
+[참고 블로그 1](https://medium.com/mj-studio/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%A0%9C%EB%84%A4%EB%A6%AD-in-out-3b809869610e), [참고 블로그 2](https://iosroid.tistory.com/70), [참고 블로그 3](https://mrgamza.tistory.com/419)
+
 * ### Generic : 
     * 클래스나 인터페이스 혹은 함수 등에서 동일한 코드로 여러 타입을 지원해주기 위해 존재
     * 사용하는 이유 :
@@ -39,8 +41,6 @@
 * T : Read / Write 모두 가능
 * out T : Read만 가능
 * in T : Write만 가능
-
-[참고 블로그 1](https://medium.com/mj-studio/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%A0%9C%EB%84%A4%EB%A6%AD-in-out-3b809869610e), [참고 블로그 2](https://iosroid.tistory.com/70), [참고 블로그 3](https://mrgamza.tistory.com/419)
 
 ```kotlin
 class Wrapper<T>(var value: T)
