@@ -18,7 +18,7 @@
 
 ## Generic
 
-[참고 블로그 1](https://medium.com/mj-studio/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%A0%9C%EB%84%A4%EB%A6%AD-in-out-3b809869610e), [참고 블로그 2](https://iosroid.tistory.com/70), [참고 블로그 3](https://mrgamza.tistory.com/419)
+[참고 블로그 1](https://medium.com/mj-studio/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%A0%9C%EB%84%A4%EB%A6%AD-in-out-3b809869610e), [참고 블로그 2](https://iosroid.tistory.com/70), [참고 블로그 3](https://mrgamza.tistory.com/419), [참고 블로그 4](https://lcw126.tistory.com/336?category=815752)
 
 * ### Generic : 
     * 클래스나 인터페이스 혹은 함수 등에서 동일한 코드로 여러 타입을 지원해주기 위해 존재
@@ -27,6 +27,17 @@
         * 내가 사용하려는 형을 넣어주므로써 다른 타입은 사용할수 없는것이다.
         <br>예를 들어 list변수가 ArrayList```<String>``` 일 경우에는 Int형식은 넣어서 사용할 수 없도록 하는 것이다.
 <br>    
+<br>
+
+    | 형식 매개변수 이름 | 의미 |
+    |:-----:|:---------:|
+    | E | 요소(Element) |
+    | K	| 키(Key) |
+    | N	| 숫자(Number) |
+    | T | 형식(Type) |
+    | V	| 값(Value) |
+    | S, U, V etc | 두 번째, 세 번째, 네 번째 형식(2nd, 3rd, 4th types) |
+
 <br>
 
 ## variance는 자바에서 와일드 카드(Wild card)와 비슷
